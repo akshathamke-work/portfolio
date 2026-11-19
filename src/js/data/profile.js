@@ -8,7 +8,7 @@ export const profile = {
    * Web3Forms access key (public by design). Create it at https://web3forms.com using
    * aksha.thamke.work@gmail.com, then paste the key from the email here.
    */
-  web3formsKey: '',
+  web3formsKey: 'b0d1ee3f-09c7-4aad-b6b9-d779124fff27',
   /** Drop your photo at src/assets/photo.jpg (3:4 portrait works best). */
   photo: './assets/photo.jpg',
   headline: ['Build AI', 'products that', 'ship.'],
