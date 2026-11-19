@@ -1,0 +1,41 @@
+.section {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding: calc(var(--header-h) + 3rem) var(--pad) 4rem;
+}
+.section--center { text-align: center; }
+
+.section__inner {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+/* Content sits in the right column so the particle shape owns the left. */
+.split--right > :first-child:not(.stack__copy) { grid-column: 1; }
+.split--right > .stack__copy { grid-column: 2; }
+.split--right > .timeline { grid-column: 2; }
+
+@media (max-width: 819px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .split--right > .stack__copy,
+  .split--right > .timeline { grid-column: 1; }
+}
+
+@media (max-width: 819px) {
+  .hero { align-items: start; padding-top: calc(var(--header-h) + 2rem); }
+}
+
+/* Portrait left, copy right */
+.split--portrait { grid-template-columns: minmax(220px, 340px) minmax(0, 1fr); align-items: center; }
+@media (max-width: 819px) {
+  .split--portrait { grid-template-columns: minmax(0, 1fr); }
+  .split--portrait .portrait { max-width: 260px; }
+}

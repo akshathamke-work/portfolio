@@ -1,0 +1,41 @@
+.contact { display: grid; justify-items: center; }
+.form {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 34rem);
+  margin-top: 2.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  text-align: left;
+}
+.field { display: grid; gap: 0.4rem; }
+.field__error:empty { display: none; }
+.field label { font-size: 0.85rem; color: var(--muted); }
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+.field textarea { resize: none; height: 9rem; overflow-y: auto; }
+.field input:focus,
+.field textarea:focus { outline: none; border-color: var(--purple-hi); background: rgba(255, 255, 255, 0.08); }
+.field [aria-invalid='true'] { border-color: #ff6b6b; }
+.field__error {  color: #ff9b9b; font-size: 0.82rem; }
+.form__status { color: var(--muted); font-size: 0.9rem; }
+.form__status:empty { display: none; }
+.form__status[data-kind='success'] { color: var(--teal); }
+.form__status[data-kind='error'] { color: #ff9b9b; }
+.btn:disabled { opacity: 0.6; cursor: progress; transform: none; }
+.contact__direct { margin-top: 1.75rem; color: var(--muted); }
+
+/* Honeypot field: off-screen, not display:none, so simple bots still fill it */
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+

@@ -1,0 +1,12 @@
+{
+  "name": "ai-developer-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aksha Thamke's Portfolio",
+  "scripts": {
+    "start": "node scripts/server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
